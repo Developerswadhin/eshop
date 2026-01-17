@@ -1,7 +1,17 @@
 import getAllProduct from "@/libs/getAllProduct";
+
 import Link from "next/link";
 import React from "react";
-import { FaRegHeart, FaPlus, FaHeart } from "react-icons/fa";
+import { FaRegHeart, FaPlus } from "react-icons/fa";
+
+type reqData = {
+  id: number;
+  title: string;
+  price: number;
+  description: string;
+  image: string;
+  category: string;
+};
 async function page() {
   const getProduct = await getAllProduct();
 
@@ -83,7 +93,7 @@ async function page() {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {getProduct.map((item, index) => {
+            {getProduct.map((item: reqData, index: number) => {
               return (
                 <div
                   key={index}
