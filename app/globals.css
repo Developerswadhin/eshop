@@ -1,26 +1,83 @@
 @import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+* {
+  font-family: Poppins;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.font-display {
+  font-family: "Playfair Display", serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.hero-gradient {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.product-image {
+  background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+}
+
+.spec-card {
+  background: #fafafa;
+  border: 1px solid #efefef;
+}
+
+.btn-primary {
+  background: #1a1a1a;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: #000;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.btn-secondary {
+  background: white;
+  border: 2px solid #1a1a1a;
+  color: #1a1a1a;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background: #1a1a1a;
+  color: white;
+}
+
+.carousel-item {
+  background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+  aspect-ratio: 1;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.carousel-item:hover {
+  border-color: #1a1a1a;
+}
+
+.carousel-item.active {
+  border-color: #1a1a1a;
+}
+
+.review-star {
+  color: #fbbf24;
+}
+
+.feature-list li {
+  padding: 12px 0;
+  border-bottom: 1px solid #efefef;
+}
+
+.feature-list li:last-child {
+  border-bottom: none;
 }
